@@ -8,144 +8,149 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="//cdn.rawgit.com/miromannino/Justified-Gallery/3.6.1/dist/css/justifiedGallery.min.css">
   </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Photostream</h1>
-      <h2 class="project-tagline">jQuery Flickr Photostream</h2>
-      <a href="https://github.com/alexandrevicenzi/photostream" class="btn">View on GitHub</a>
-      <a href="https://github.com/alexandrevicenzi/photostream/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/alexandrevicenzi/photostream/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+<body>
+  <section class="page-header">
+    <h1 class="project-name">Photostream</h1>
+    <h2 class="project-tagline">jQuery Flickr Photostream</h2>
+    <a href="https://github.com/alexandrevicenzi/photostream" class="btn">View on GitHub</a>
+    <a href="https://github.com/alexandrevicenzi/photostream/zipball/master" class="btn">Download .zip</a>
+    <a href="https://github.com/alexandrevicenzi/photostream/tarball/master" class="btn">Download .tar.gz</a>
+  </section>
+  <section class="main-content">
+    <h2>
+      <a id="jqueryphotostream---" class="anchor" href="#jqueryphotostream---" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>jQuery.photostream <a href="https://travis-ci.org/alexandrevicenzi/photostream"><img src="https://travis-ci.org/alexandrevicenzi/photostream.svg?branch=master" alt="Build Status"></a> <a href="https://www.npmjs.com/package/photostream"><img src="https://img.shields.io/npm/v/photostream.svg" alt="npm"></a> <img src="https://img.shields.io/bower/v/photostream.svg" alt="bower">
+    </h2>
+    <p>jQuery plugin to embed Flickr Photostream on your site as below.</p>
+    <div id="flickr"></div>
+    <p>This is my actual Flickr account, check it <a href="https://www.flickr.com/photos/alexandrevicenzi/">here</a>.</p>
 
-    <section class="main-content">
-      <h2>
-<a id="jqueryphotostream---" class="anchor" href="#jqueryphotostream---" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>jQuery.photostream <a href="https://travis-ci.org/alexandrevicenzi/photostream"><img src="https://travis-ci.org/alexandrevicenzi/photostream.svg?branch=master" alt="Build Status"></a> <a href="https://www.npmjs.com/package/photostream"><img src="https://img.shields.io/npm/v/photostream.svg" alt="npm"></a> <img src="https://img.shields.io/bower/v/photostream.svg" alt="bower">
-</h2>
+    <h2>
+      <a id="install" class="anchor" href="#install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install
+    </h2>
+    <p><code>npm install photostream</code> or <code>bower install photostream</code></p>
 
-<p>jQuery plugin to embed Flickr Photostream on your site.</p>
+    <h2>
+      <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage
+    </h2>
+    <p>The basics:</p>
+    <div class="highlight highlight-source-js">
+<pre><span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>#flickr<span class="pl-pds">'</span></span>).<span class="pl-en">photostream</span>({
+  api_key<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;your key&gt;<span class="pl-pds">'</span></span>,
+  user_id<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;your id&gt;<span class="pl-pds">'</span></span>
+});</pre>
+    </div>
 
-<div id="flickr"></div>
+    <h3>
+      <a id="options" class="anchor" href="#options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Options
+    </h3>
+    <table>
+      <thead>
+        <tr>
+          <th align="center">Option</th>
+          <th align="left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">api_key</td>
+          <td align="left">Flickr API key.</td>
+        </tr>
+        <tr>
+          <td align="center">user_id</td>
+          <td align="left">Flickr user ID.</td>
+        </tr>
+        <tr>
+          <td align="center">image_size</td>
+          <td align="left">Size suffix <code>[sqtmnzcbnko]</code>. Default is <code>m</code> (small, 240 on longest side). Read more <a href="https://www.flickr.com/services/api/misc.urls.html">here</a>.</td>
+        </tr>
+        <tr>
+          <td align="center">image_count</td>
+          <td align="left">Max image count to show. Default is 10.</td>
+        </tr>
+        <tr>
+          <td align="center">target</td>
+          <td align="left">
+          <code>&lt;a&gt;</code> target. Default is <code>_blank</code>.</td>
+        </tr>
+      </tbody>
+    </table>
 
-<p>This is my actual Flickr account, check it <a href="https://www.flickr.com/photos/alexandrevicenzi/">here</a>.</p>
+    <h3>
+      <a id="events" class="anchor" href="#events" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Events
+    </h3>
+    <table>
+      <thead>
+        <tr>
+          <th align="center">Event</th>
+          <th align="left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">ps.complete</td>
+          <td align="left">Fired when photostream is loaded.</td>
+        </tr>
+        <tr>
+          <td align="center">ps.error</td>
+          <td align="left">Fired when something goes wrong. For example, wrong API key.</td>
+        </tr>
+      </tbody>
+    </table>
 
-<p></p>
+    <h2>
+      <a id="how-to-create-the-justified-gallery" class="anchor" href="#how-to-create-the-justified-gallery" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to create the justified gallery?
+    </h2>
+    <p>By default jQuery.photostream doesn't do nothing with images. If you want to create a cool gallery you can use <a href="http://miromannino.github.io/Justified-Gallery/">Justified Gallery</a>.</p>
+    <p>Here is an example:</p>
+    <div class="highlight highlight-source-js">
+<pre><span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>#flickr<span class="pl-pds">'</span></span>).<span class="pl-en">on</span>(<span class="pl-s"><span class="pl-pds">'</span>ps.complete<span class="pl-pds">'</span></span>, <span class="pl-k">function</span> () {
+  <span class="pl-en">$</span>(<span class="pl-v">this</span>).<span class="pl-en">justifiedGallery</span>({
+    rowHeight<span class="pl-k">:</span> <span class="pl-c1">120</span>,
+    lastRow<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>justify<span class="pl-pds">'</span></span>,
+    captions<span class="pl-k">:</span> <span class="pl-c1">true</span>,
+    randomize<span class="pl-k">:</span> <span class="pl-c1">true</span>,
+    border<span class="pl-k">:</span> <span class="pl-c1">4</span>,
+  });
+});</pre>
+    </div>
 
+    <footer class="site-footer">
+      <span class="site-footer-owner"><a href="https://github.com/alexandrevicenzi/photostream">Photostream</a> is maintained by <a href="https://github.com/alexandrevicenzi">alexandrevicenzi</a>.</span>
+      <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+    </footer>
+  </section>
 
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-55543164-5', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+  <script type="text/javascript" src="//cdn.rawgit.com/alexandrevicenzi/photostream/master/dist/jquery.photostream.min.js"></script>
+  <script type="text/javascript" src="//cdn.rawgit.com/miromannino/Justified-Gallery/3.6.1/dist/js/jquery.justifiedGallery.min.js"></script>
+  <script type="text/javascript">
+      $('#flickr').photostream({
+          api_key: '4fcef92d707f6241b96ab8c1c085d28f',
+          user_id: '136853494@N07',
+          image_size: 'n',
+          image_count: 20,
+          target: '_blank'
+      });
 
-
-
-
-
-
-
-<h2>
-<a id="install" class="anchor" href="#install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install</h2>
-
-<p><code>npm install photostream</code> or <code>bower install photostream</code></p>
-
-<h2>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
-
-<p>The basics:</p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>#flickr<span class="pl-pds">'</span></span>).<span class="pl-en">photostream</span>({
-    api_key<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;your key&gt;<span class="pl-pds">'</span></span>,
-    user_id<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;your id&gt;<span class="pl-pds">'</span></span>
-});</pre></div>
-
-<h3>
-<a id="options" class="anchor" href="#options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Options</h3>
-
-<table>
-<thead>
-<tr>
-<th align="center">Option</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">api_key</td>
-<td align="left">Flickr API key.</td>
-</tr>
-<tr>
-<td align="center">user_id</td>
-<td align="left">Flickr user ID.</td>
-</tr>
-<tr>
-<td align="center">image_size</td>
-<td align="left">Size suffix <code>[sqtmnzcbnko]</code>. Default is <code>m</code> (small, 240 on longest side). Read more <a href="https://www.flickr.com/services/api/misc.urls.html">here</a>.</td>
-</tr>
-<tr>
-<td align="center">image_count</td>
-<td align="left">Max image count to show. Default is 10.</td>
-</tr>
-<tr>
-<td align="center">target</td>
-<td align="left">
-<code>&lt;a&gt;</code> target. Default is <code>_blank</code>.</td>
-</tr>
-</tbody>
-</table>
-
-<h3>
-<a id="events" class="anchor" href="#events" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Events</h3>
-
-<table>
-<thead>
-<tr>
-<th align="center">Event</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">ps.complete</td>
-<td align="left">Fired when photostream is loaded.</td>
-</tr>
-<tr>
-<td align="center">ps.error</td>
-<td align="left">Fired when something goes wrong. For example, wrong API key.</td>
-</tr>
-</tbody>
-</table>
-
-<h3>
-<a id="how-to-create-the-justified-gallery" class="anchor" href="#how-to-create-the-justified-gallery" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to create the justified gallery?</h3>
-
-<p>By default jQuery.photostream doesn't do nothing with images. If you want to create a cool gallery you can use <a href="http://miromannino.github.io/Justified-Gallery/">Justified Gallery</a>.</p>
-
-<p>Here is an example:</p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>#flickr<span class="pl-pds">'</span></span>).<span class="pl-en">on</span>(<span class="pl-s"><span class="pl-pds">'</span>ps.complete<span class="pl-pds">'</span></span>, <span class="pl-k">function</span> () {
-    <span class="pl-en">$</span>(<span class="pl-v">this</span>).<span class="pl-en">justifiedGallery</span>({
-        rowHeight<span class="pl-k">:</span> <span class="pl-c1">120</span>,
-        lastRow<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>justify<span class="pl-pds">'</span></span>,
-        captions<span class="pl-k">:</span> <span class="pl-c1">true</span>,
-        randomize<span class="pl-k">:</span> <span class="pl-c1">true</span>,
-        border<span class="pl-k">:</span> <span class="pl-c1">4</span>,
-    });
-});</pre></div>
-
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/alexandrevicenzi/photostream">Photostream</a> is maintained by <a href="https://github.com/alexandrevicenzi">alexandrevicenzi</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
-
-            <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-55543164-5");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
-
-  </body>
+      $('#flickr').on('ps.complete', function () {
+          $(this).justifiedGallery({
+              rowHeight: 120,
+              lastRow: 'justify',
+              captions: true,
+              randomize: true,
+              border: 4,
+          });
+      })
+  </script>
+</body>
 </html>
