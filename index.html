@@ -116,6 +116,31 @@
     });
 });</pre></div>
 
+      <div id="flickr"></div>
+      <link rel="stylesheet" type="text/css" href="//cdn.rawgit.com/miromannino/Justified-Gallery/3.6.1/dist/css/justifiedGallery.min.css">
+      <script type="text/javascript" src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+      <script type="text/javascript" src="//cdn.rawgit.com/alexandrevicenzi/photostream/master/dist/jquery.photostream.min.js"></script>
+      <script type="text/javascript" src="//cdn.rawgit.com/miromannino/Justified-Gallery/3.6.1/dist/js/jquery.justifiedGallery.min.js"></script>
+      <script type="text/javascript">
+          $('#flickr').photostream({
+              api_key: '4fcef92d707f6241b96ab8c1c085d28f',
+              user_id: '136853494@N07',
+              image_size: 'n',
+              image_count: 20,
+              target: '_blank'
+          });
+
+          $('#flickr').on('ps.complete', function () {
+              $(this).justifiedGallery({
+                  rowHeight: 120,
+                  lastRow: 'justify',
+                  captions: true,
+                  randomize: true,
+                  border: 4,
+              });
+          })
+      </script>
+
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/alexandrevicenzi/photostream">Photostream</a> is maintained by <a href="https://github.com/alexandrevicenzi">alexandrevicenzi</a>.</span>
 
@@ -123,7 +148,5 @@
       </footer>
 
     </section>
-
-  
   </body>
 </html>
