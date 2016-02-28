@@ -1,4 +1,4 @@
-## jQuery.photostream
+## jQuery.photostream [![Build Status](https://travis-ci.org/alexandrevicenzi/photostream.svg?branch=master)](https://travis-ci.org/alexandrevicenzi/photostream)
 
 jQuery plugin to embed Flickr Photostream on your site.
 
@@ -18,7 +18,7 @@ $('#flickr').photostream({
 ### Options
 
 | Option | Description |
-|:------:|:-----------:|
+|:------:|:------------|
 | api_key | Flickr API key. |
 | user_id | Flickr user ID. |
 | image_size | Size suffix `[sqtmnzcbnko]`. Default is `m` (small, 240 on longest side). Read more [here](https://www.flickr.com/services/api/misc.urls.html). |
@@ -28,7 +28,7 @@ $('#flickr').photostream({
 ### Events
 
 | Event | Description |
-|:------:|:-----------:|
+|:------:|:-----------|
 | ps.complete | Fired when photostream is loaded. |
 | ps.error | Fired when something goes wrong. For example, wrong API key. |
 
