@@ -4,6 +4,10 @@ jQuery plugin to embed Flickr Photostream on your site.
 
 ![Screenshot](./screenshot.png)
 
+## Install
+
+`npm install photostream` or `bower install photostream`
+
 ## Usage
 
 The basics:
