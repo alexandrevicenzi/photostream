@@ -1,0 +1,27 @@
+{
+  "name": "jQuery.photostream",
+  "version": "1.0.0",
+  "homepage": "https://github.com/alexandrevicenzi/photostream",
+  "authors": [
+    "Alexandre Vicenzi <vicenzi.alexandre@gmail.com>"
+  ],
+  "description": "jQuey Flick Photostream",
+  "main": "src/jquery.photostream.js",
+  "dependencies": {
+    "jquery": ">=1.8"
+  },
+  "keywords": [
+    "jquery",
+    "flickr",
+    "photostream"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    ".travis.yml",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
