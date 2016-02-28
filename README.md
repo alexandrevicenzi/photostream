@@ -1,4 +1,4 @@
-## jQuery.photostream [![Build Status](https://travis-ci.org/alexandrevicenzi/photostream.svg?branch=master)](https://travis-ci.org/alexandrevicenzi/photostream)
+## jQuery.photostream [![Build Status](https://travis-ci.org/alexandrevicenzi/photostream.svg?branch=master)](https://travis-ci.org/alexandrevicenzi/photostream) [![npm](https://img.shields.io/npm/v/photostream.svg)](https://www.npmjs.com/package/photostream) ![bower](https://img.shields.io/bower/v/photostream.svg)
 
 jQuery plugin to embed Flickr Photostream on your site.
 
