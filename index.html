@@ -135,14 +135,14 @@
   <script type="text/javascript" src="//cdn.rawgit.com/miromannino/Justified-Gallery/3.6.1/dist/js/jquery.justifiedGallery.min.js"></script>
   <script type="text/javascript">
       $('#flickr').photostream({
-          api_key: '4fcef92d707f6241b96ab8c1c085d28f',
+          api_key: '2d3db3f65a5b93cc38c4f479ff693f17',
           user_id: '136853494@N07',
           image_size: 'n',
           image_count: 20,
           target: '_blank'
-      });
-
-      $('#flickr').on('ps.complete', function () {
+      }).on('ps.error', function (e, error) {
+          $(this).text(error.message).css('color', '#FF4136');
+      }).on('ps.complete', function () {
           $(this).justifiedGallery({
               rowHeight: 120,
               lastRow: 'justify',
